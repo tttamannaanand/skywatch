@@ -1,0 +1,134 @@
+:root {
+  --bg: #05060c;
+  --bg-2: #0a0d1a;
+  --surface: rgba(18, 22, 40, 0.72);
+  --surface-solid: #11152a;
+  --line: rgba(140, 160, 255, 0.14);
+  --ink: #eef1ff;
+  --ink-2: #b4bad6;
+  --ink-3: #7c83a6;
+  --accent: #7fa8ff;
+  --sun: #ffc857;
+  --hot: #ff8a5c;
+  --cold: #6fd3ff;
+  --good: #7be0b0;
+  --radius: 18px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; background: radial-gradient(1200px 600px at 70% -10%, #18204a 0%, transparent 60%), var(--bg); color: var(--ink); font: 15px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; min-height: 100vh; }
+a { color: var(--accent); }
+h1, h2, h3 { font-family: "Space Grotesk", Inter, system-ui, sans-serif; letter-spacing: -0.02em; margin: 0; }
+h2 { font-size: clamp(26px, 4vw, 38px); }
+#stars { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+
+.top { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 22px; padding: 12px max(16px, calc((100vw - 1180px) / 2)); background: rgba(5, 6, 12, 0.72); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 600 18px "Space Grotesk", sans-serif; }
+.logo { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #fff3c4, var(--sun) 45%, #ff9a3c 75%); box-shadow: 0 0 18px rgba(255, 200, 87, 0.6); position: relative; }
+.logo::after { content: ""; position: absolute; inset: 7px -6px; border: 1.5px solid var(--accent); border-radius: 50%; transform: rotate(-20deg); }
+nav { display: flex; gap: 18px; flex: 1; }
+nav a { color: var(--ink-2); text-decoration: none; font-size: 14px; }
+nav a:hover { color: var(--ink); }
+.clock { font-variant-numeric: tabular-nums; color: var(--ink-3); font-size: 13px; white-space: nowrap; }
+
+main { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+.section { padding: 56px 0 24px; }
+.section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+.eyebrow { margin: 0 0 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.lede { margin: 8px 0 0; color: var(--ink-2); max-width: 62ch; }
+
+.btn { font: inherit; font-size: 14px; color: var(--ink); background: rgba(127, 168, 255, 0.16); border: 1px solid rgba(127, 168, 255, 0.35); border-radius: 999px; padding: 8px 16px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.btn:hover { background: rgba(127, 168, 255, 0.26); }
+.btn.ghost { background: transparent; }
+.btn.small { padding: 6px 12px; font-size: 13px; }
+.seg { display: inline-flex; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; flex-wrap: wrap; }
+.seg button { font: inherit; font-size: 13px; color: var(--ink-2); background: none; border: 0; padding: 6px 12px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+.seg button[aria-checked="true"] { background: var(--ink); color: var(--bg); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* APOD */
+.apod { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(8px); }
+.apod-media { position: relative; background: #000; min-height: 360px; display: grid; place-items: center; }
+.apod-media img { width: 100%; height: 100%; max-height: 620px; object-fit: cover; display: block; }
+.apod-media iframe, .apod-media video { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
+.skeleton { position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%) #0b0e1c; background-size: 200% 100%; animation: shimmer 1.4s infinite; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.apod-text { padding: 26px 28px; display: flex; flex-direction: column; gap: 10px; }
+.apod-text h1 { font-size: clamp(24px, 3vw, 34px); line-height: 1.15; }
+.date { margin: 0; color: var(--sun); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; }
+.credit { margin: 0; color: var(--ink-3); font-size: 13px; }
+.explain { margin: 0; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; }
+.explain.open { -webkit-line-clamp: unset; }
+.apod-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; padding-top: 8px; }
+.strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(120px, 1fr); gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 6px; }
+.strip button { position: relative; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; padding: 0; background: #000; cursor: pointer; aspect-ratio: 4 / 3; }
+.strip button img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; transition: opacity 0.2s, transform 0.3s; }
+.strip button:hover img, .strip button[aria-current="true"] img { opacity: 1; transform: scale(1.04); }
+.strip button[aria-current="true"] { border-color: var(--sun); }
+.strip span { position: absolute; left: 6px; bottom: 5px; font-size: 11px; color: #fff; text-shadow: 0 1px 4px #000; }
+
+/* Orrery */
+.orrery-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; backdrop-filter: blur(8px); }
+.orrery-controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+.orrery-wrap { position: relative; }
+#orrery { width: 100%; height: min(72vh, 720px); display: block; border-radius: 12px; cursor: grab; touch-action: none; }
+#orrery:active { cursor: grabbing; }
+.sim-date { position: absolute; left: 14px; top: 10px; font: 600 15px "Space Grotesk", sans-serif; color: var(--ink); pointer-events: none; text-shadow: 0 1px 6px #000; }
+.sim-date small { display: block; font: 500 12px Inter, sans-serif; color: var(--ink-3); }
+.distances { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.dist { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; font-size: 13px; color: var(--ink-2); display: flex; gap: 10px; align-items: center; }
+.dist b { color: var(--ink); font-weight: 600; }
+.dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+
+/* Weather */
+.weather-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.wcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 10px; backdrop-filter: blur(8px); position: relative; overflow: hidden; }
+.wcard.live { grid-column: span 2; }
+.wcard header { display: flex; align-items: center; gap: 12px; }
+.globe { width: 54px; height: 54px; border-radius: 50%; flex: none; box-shadow: inset -10px -8px 18px rgba(0, 0, 0, 0.65), 0 0 22px rgba(127, 168, 255, 0.12); position: relative; overflow: hidden; }
+.globe img { width: 100%; height: 100%; object-fit: cover; }
+.wcard.live .globe { width: 96px; height: 96px; }
+.wcard h3 { font-size: 20px; }
+.badge { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-3); }
+.badge.live { color: var(--good); border-color: rgba(123, 224, 176, 0.4); }
+.badge.live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--good); margin-right: 5px; vertical-align: 1px; animation: pulse 1.6s infinite; }
+@keyframes pulse { 50% { opacity: 0.3; } }
+.temp { font: 600 34px "Space Grotesk", sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.temp small { font: 500 13px Inter, sans-serif; color: var(--ink-3); margin-left: 6px; letter-spacing: 0; }
+.cond { margin: 0; color: var(--ink-2); font-size: 14px; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
+.facts li { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); padding-top: 6px; }
+.facts li span:first-child { color: var(--ink-3); white-space: nowrap; }
+.facts li span:last-child { text-align: right; color: var(--ink); }
+.live-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.live-grid div { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+.live-grid b { display: block; font: 600 18px "Space Grotesk", sans-serif; font-variant-numeric: tabular-nums; }
+.live-grid span { font-size: 12px; color: var(--ink-3); }
+.spark { width: 100%; height: 64px; display: block; }
+.note { font-size: 12px; color: var(--ink-3); margin: 0; }
+
+.tip { position: fixed; z-index: 20; pointer-events: none; background: rgba(10, 13, 28, 0.94); border: 1px solid var(--line); color: var(--ink); padding: 8px 11px; border-radius: 10px; font-size: 12.5px; max-width: 260px; line-height: 1.45; font-variant-numeric: tabular-nums; }
+footer { max-width: 1180px; margin: 40px auto 0; padding: 24px 16px 48px; color: var(--ink-3); font-size: 13px; border-top: 1px solid var(--line); }
+
+@media (max-width: 980px) {
+  .weather-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .distances { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .apod { grid-template-columns: 1fr; }
+  .apod-media { min-height: 240px; }
+  nav { display: none; }
+  .top { justify-content: space-between; }
+}
+@media (max-width: 560px) {
+  .weather-grid { grid-template-columns: 1fr; }
+  .wcard.live { grid-column: span 1; }
+  .live-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #orrery { height: 60vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .skeleton, .badge.live::before { animation: none; }
+}

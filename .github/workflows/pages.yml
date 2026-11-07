@@ -1,0 +1,34 @@
+name: pages
+# Refreshes NASA data every morning, then publishes web/ to GitHub Pages.
+on:
+  push: { branches: [main] }
+  schedule: [{ cron: "30 6 * * *" }]
+  workflow_dispatch:
+permissions: { contents: write, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: true }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests
+      - name: Fetch today's NASA data
+        env: { NASA_API_KEY: "${{ secrets.NASA_API_KEY || 'DEMO_KEY' }}" }
+        run: python pipeline/fetch_daily.py apod mars epic
+      - name: Save the data
+        run: |
+          git config user.name "skywatch-bot"
+          git config user.email "skywatch-bot@users.noreply.github.com"
+          git add web/data && git commit -m "Daily NASA data" || echo "no changes"
+          git push || true
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - run: node --test
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: web }
+      - id: d
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,47 @@
+{
+ "fetched": "2026-11-07T07:24:48+00:00",
+ "items": [
+  {
+   "date": "2026-11-03 00:31:45",
+   "url": "https://epic.gsfc.nasa.gov/archive/natural/2026/11/03/jpg/epic_1b_20261103003634.jpg",
+   "lat": -6.628418,
+   "lon": 157.668457
+  },
+  {
+   "date": "2026-11-03 02:19:47",
+   "url": "https://epic.gsfc.nasa.gov/archive/natural/2026/11/03/jpg/epic_1b_20261103022436.jpg",
+   "lat": -6.70166,
+   "lon": 130.649414
+  },
+  {
+   "date": "2026-11-03 04:07:50",
+   "url": "https://epic.gsfc.nasa.gov/archive/natural/2026/11/03/jpg/epic_1b_20261103041238.jpg",
+   "lat": -6.723633,
+   "lon": 103.601074
+  },
+  {
+   "date": "2026-11-03 05:55:52",
+   "url": "https://epic.gsfc.nasa.gov/archive/natural/2026/11/03/jpg/epic_1b_20261103060041.jpg",
+   "lat": -6.774902,
+   "lon": 76.604004
+  },
+  {
+   "date": "2026-11-03 07:43:54",
+   "url": "https://epic.gsfc.nasa.gov/archive/natural/2026/11/03/jpg/epic_1b_20261103074843.jpg",
+   "lat": -6.800537,
+   "lon": 49.592285
+  },
+  {
+   "date": "2026-11-03 09:31:56",
+   "url": "https://epic.gsfc.nasa.gov/archive/natural/2026/11/03/jpg/epic_1b_20261103093645.jpg",
+   "lat": -6.833496,
+   "lon": 22.587891
+  },
+  {
+   "date": "2026-11-03 11:19:59",
+   "url": "https://epic.gsfc.nasa.gov/archive/natural/2026/11/03/jpg/epic_1b_20261103112447.jpg",
+   "lat": -6.906738,
+   "lon": -4.431152
+  }
+ ]
+}

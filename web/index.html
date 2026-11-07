@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skywatch</title>
+<meta name="description" content="NASA's picture of the day, the planets moving live, and the weather on every planet, from real NASA and JPL data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='6' fill='%23ffc857'/><ellipse cx='16' cy='16' rx='14' ry='5' fill='none' stroke='%237fa8ff' stroke-width='2'/></svg>">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header class="top">
+  <a class="brand" href="#today"><span class="logo" aria-hidden="true"></span>Skywatch</a>
+  <nav aria-label="Sections">
+    <a href="#today">Today</a>
+    <a href="#system">Solar system</a>
+    <a href="#weather">Planet weather</a>
+  </nav>
+  <span id="clock" class="clock" aria-live="off"></span>
+</header>
+
+<main>
+  <!-- Picture of the day -->
+  <section id="today" class="section">
+    <p class="eyebrow">NASA Astronomy Picture of the Day</p>
+    <article class="apod" id="apod" aria-busy="true">
+      <div class="apod-media" id="apodMedia"><div class="skeleton"></div></div>
+      <div class="apod-text">
+        <p class="date" id="apodDate"></p>
+        <h1 id="apodTitle">Loading today's picture…</h1>
+        <p class="credit" id="apodCredit"></p>
+        <p class="explain" id="apodExplain"></p>
+        <div class="apod-actions">
+          <button class="btn" id="apodMore" hidden>Read more</button>
+          <a class="btn ghost" id="apodHd" target="_blank" rel="noopener" hidden>Full resolution ↗</a>
+        </div>
+      </div>
+    </article>
+    <div class="strip" id="apodStrip" aria-label="Recent pictures"></div>
+  </section>
+
+  <!-- Live solar system -->
+  <section id="system" class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Live · JPL orbital elements</p>
+        <h2>The solar system, right now</h2>
+        <p class="lede">Every planet where it really is today, moving at its real speed. Speed time up to watch them orbit.</p>
+      </div>
+    </div>
+    <div class="orrery-card">
+      <div class="orrery-controls">
+        <div class="seg" role="radiogroup" aria-label="Speed" id="speeds"></div>
+        <div class="seg" role="radiogroup" aria-label="View" id="views"></div>
+        <button class="btn small" id="toNow">Back to now</button>
+      </div>
+      <div class="orrery-wrap">
+        <canvas id="orrery" role="img" aria-label="Animated map of the planets orbiting the Sun"></canvas>
+        <div class="sim-date" id="simDate"></div>
+      </div>
+      <div class="distances" id="distances"></div>
+    </div>
+  </section>
+
+  <!-- Weather -->
+  <section id="weather" class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Planet weather</p>
+        <h2>The forecast for every planet</h2>
+        <p class="lede">Live from the Curiosity rover on Mars and the EPIC camera watching Earth. Everywhere else: NASA's measured conditions, plus the season each planet is in today.</p>
+      </div>
+      <div class="seg" role="radiogroup" aria-label="Temperature unit" id="units"></div>
+    </div>
+    <div class="weather-grid" id="weatherGrid"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Built on real data from <a href="https://apod.nasa.gov/">NASA APOD</a>, <a href="https://ssd.jpl.nasa.gov/planets/approx_pos.html">JPL planetary elements</a>, <a href="https://mars.nasa.gov/msl/weather/">Curiosity REMS</a>, <a href="https://epic.gsfc.nasa.gov/">NASA EPIC</a> and the <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">NASA Planetary Fact Sheet</a>. Not affiliated with NASA.</p>
+</footer>
+
+<div id="tip" class="tip" role="tooltip" hidden></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
