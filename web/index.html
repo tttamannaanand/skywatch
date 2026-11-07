@@ -20,6 +20,8 @@
     <a href="#today">Today</a>
     <a href="#system">Solar system</a>
     <a href="#weather">Planet weather</a>
+    <a href="#asteroids">Asteroids</a>
+    <a href="#exoplanets">Exoplanets</a>
   </nav>
   <span id="clock" class="clock" aria-live="off"></span>
 </header>
@@ -58,6 +60,7 @@
         <div class="seg" role="radiogroup" aria-label="Speed" id="speeds"></div>
         <div class="seg" role="radiogroup" aria-label="View" id="views"></div>
         <button class="btn small" id="toNow">Back to now</button>
+        <label class="check"><input type="checkbox" id="showAst" checked> Show asteroids</label>
       </div>
       <div class="orrery-wrap">
         <canvas id="orrery" role="img" aria-label="Animated map of the planets orbiting the Sun"></canvas>
@@ -79,10 +82,50 @@
     </div>
     <div class="weather-grid" id="weatherGrid"></div>
   </section>
+  <!-- Asteroids -->
+  <section id="asteroids" class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Asteroid watch · NASA/JPL close-approach data</p>
+        <h2>Who's flying past Earth</h2>
+        <p class="lede">Every asteroid JPL predicts will pass within 20 Moon-distances of Earth, from last week to two months ahead, with its real orbit and what would happen if it hit. They're all flybys: none of them hits us.</p>
+      </div>
+    </div>
+    <div class="stat-row" id="astStats"></div>
+    <div class="ast-grid">
+      <div class="card">
+        <div class="card-head"><h3>The close-approach clock</h3><span class="note" id="clockRange"></span></div>
+        <p class="note">Earth in the middle, the Moon's orbit dashed. Each dot is an asteroid at its closest distance, placed around the dial by date. Bigger dots are bigger rocks.</p>
+        <svg id="astClock" class="ast-clock" role="img" aria-label="Asteroid close approaches by date and distance"></svg>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>The flyby list</h3>
+          <div class="seg" role="radiogroup" aria-label="Which asteroids" id="astFilter"></div>
+        </div>
+        <ol class="ast-list" id="astList"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exoplanets -->
+  <section id="exoplanets" class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Exoplanet hunter · TESS light curves</p>
+        <h2>Finding planets around other stars</h2>
+        <p class="lede">When a planet crosses in front of its star, the star dims a tiny bit, the same way every orbit. Skywatch downloaded real brightness measurements from NASA's TESS telescope and searched them for those dips, then checked its answers against NASA's Exoplanet Archive.</p>
+      </div>
+    </div>
+    <div class="stat-row" id="exoStats"></div>
+    <div class="exo-layout">
+      <div class="card exo-picker" id="exoPicker"></div>
+      <div class="card exo-detail" id="exoDetail"></div>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <p>Built on real data from <a href="https://apod.nasa.gov/">NASA APOD</a>, <a href="https://ssd.jpl.nasa.gov/planets/approx_pos.html">JPL planetary elements</a>, <a href="https://mars.nasa.gov/msl/weather/">Curiosity REMS</a>, <a href="https://epic.gsfc.nasa.gov/">NASA EPIC</a> and the <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">NASA Planetary Fact Sheet</a>. Not affiliated with NASA.</p>
+  <p>Built on real data from <a href="https://apod.nasa.gov/">NASA APOD</a>, <a href="https://ssd.jpl.nasa.gov/planets/approx_pos.html">JPL planetary elements</a>, <a href="https://mars.nasa.gov/msl/weather/">Curiosity REMS</a>, <a href="https://epic.gsfc.nasa.gov/">NASA EPIC</a> the <a href="https://ssd-api.jpl.nasa.gov/doc/cad.html">JPL close-approach</a> and <a href="https://ssd-api.jpl.nasa.gov/doc/sbdb.html">small-body</a> databases, <a href="https://archive.stsci.edu/missions-and-data/tess">TESS light curves from MAST</a>, the <a href="https://exoplanetarchive.ipac.caltech.edu/">NASA Exoplanet Archive</a> and the <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">NASA Planetary Fact Sheet</a>. Not affiliated with NASA.</p>
 </footer>
 
 <div id="tip" class="tip" role="tooltip" hidden></div>

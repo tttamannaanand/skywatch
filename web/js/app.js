@@ -1,4 +1,6 @@
-import { AU_KM, PLANETS, orbitPath, planetPosition } from "./orbits.js";
+import { render as renderAsteroids } from "./asteroids.js";
+import { render as renderExoplanets } from "./exoplanets.js";
+import { AU_KM, PLANETS, bodyOrbit, bodyPosition, orbitPath, planetPosition } from "./orbits.js";
 import { FACTS, now as nowFacts, season, toF } from "./planets.js";
 
 const $ = (s) => document.querySelector(s);
@@ -193,6 +195,8 @@ function orrery() {
   let paths = null;
   let pathsAt = 0;
   let hover = null;
+  let asts = []; // {nm, el, orbit}
+  let hoverAst = null;
   let W = 0;
   let H = 0;
 
@@ -255,7 +259,20 @@ function orrery() {
       const d = Math.hypot(s.x - mx, s.y - my);
       if (d < best) [best, hover] = [d, p];
     }
-    if (hover) {
+    hoverAst = null;
+    if (!hover && $("#showAst").checked) {
+      let bestA = 10;
+      for (const a of asts) {
+        const s = project(bodyPosition(a.el, sim));
+        const d = Math.hypot(s.x - mx, s.y - my);
+        if (d < bestA) [bestA, hoverAst] = [d, a];
+      }
+    }
+    if (hoverAst) {
+      const a = hoverAst;
+      const when = new Date(a.t).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" });
+      showTip(e, `<b>${esc(a.nm)}</b><br>Closest to Earth on ${when}: ${fmt(a.dist_ld, 2)} Moon-distances<br>Orbit: ${fmt(a.el.a, 2)} au, takes ${fmt(365.25 * a.el.a ** 1.5)} days`);
+    } else if (hover) {
       const f = nowFacts(hover.name, sim);
       showTip(
         e,
@@ -341,6 +358,24 @@ function orrery() {
       ctx.fillText(p.name, lx, ly);
     }
 
+    if ($("#showAst").checked && asts.length) {
+      for (const a of asts) {
+        ctx.strokeStyle = hoverAst === a ? "rgba(255,138,92,0.7)" : "rgba(255,138,92,0.13)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        a.orbit.forEach((q, i) => {
+          const s = project(q);
+          i ? ctx.lineTo(s.x, s.y) : ctx.moveTo(s.x, s.y);
+        });
+        ctx.stroke();
+        const s = project(bodyPosition(a.el, sim));
+        ctx.fillStyle = a.dist_ld < 1 ? "#ffc857" : "#ff8a5c";
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, hoverAst === a ? 3.5 : 2, 0, 6.283);
+        ctx.fill();
+      }
+    }
+
     const d = new Date(sim);
     const diff = (sim - Date.now()) / DAY;
     const rel = Math.abs(diff) < 1 / 24 ? "Live" : diff > 0 ? `${fmtSpan(diff)} from now` : `${fmtSpan(-diff)} ago`;
@@ -361,6 +396,13 @@ function orrery() {
   };
   list();
   setInterval(list, 500);
+  return {
+    setAsteroids(items) {
+      asts = items
+        .filter((a) => a.elements && a.elements.a && a.elements.e < 1)
+        .map((a) => ({ ...a, el: a.elements, orbit: bodyOrbit(a.elements, 180) }));
+    },
+  };
 }
 
 function shade(hex) {
@@ -526,5 +568,13 @@ function weather() {
 stars();
 clock();
 loadApod();
-orrery();
+const sky = orrery();
 weather();
+fetch("data/asteroids.json")
+  .then((r) => r.json())
+  .then((d) => sky.setAsteroids(renderAsteroids(d, $, showTip, hideTip)))
+  .catch(() => ($("#astStats").innerHTML = '<p class="note">Asteroid data is unavailable right now.</p>'));
+fetch("data/exoplanets.json")
+  .then((r) => r.json())
+  .then((d) => renderExoplanets(d, $, showTip, hideTip))
+  .catch(() => ($("#exoStats").innerHTML = '<p class="note">The exoplanet results are still being computed.</p>'));
