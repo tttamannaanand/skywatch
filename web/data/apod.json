@@ -1,7 +1,18 @@
 {
- "fetched": "2026-11-21T11:24:17+00:00",
+ "fetched": "2026-11-22T14:47:34+00:00",
  "source": "science.nasa.gov/apod",
  "items": [
+  {
+   "date": "2026-11-22",
+   "title": "Swirls and Colors on Jupiter from Juno",
+   "explanation": "What creates the colors in Jupiter’s clouds? No one is sure. The thick atmosphere of Jupiter is mostly hydrogen and helium, elements which are colorless at the low temperatures of the Jovian cloud tops. Which trace molecules provide the colors remains a topic of research, although small amounts of ammonium hydrosulfide are one leading candidate. What is clear from the featured color-enhanced image — and many similar images — is that lighter clouds are typically higher up than darker ones. Pictured, light clouds swirl around reddish regions toward the lower right, while they appear to cover over some darker domains on the upper right. The featured image was taken by the robotic Juno spacecraft in 2018 during its 14th low pass over Jupiter. Juno continues in its looping elliptical orbit, swooping near the huge planet every 33 days and exploring a slightly different sector each time around.",
+   "copyright": "NASA, Juno, SwRI, MSSS; Processing & License : Matt Brealey, Seán Doran",
+   "url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/JupiterSwirls_JunoBrealey_3709.jpg",
+   "hdurl": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/JupiterSwirls_JunoBrealey_3709.jpg",
+   "media_type": "image",
+   "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/JupiterSwirls_JunoBrealey_3709.jpg",
+   "link": "https://science.nasa.gov/image-article/apod-2026-november-22-swirls-and-colors-on-jupiter-from-juno/"
+  },
   {
    "date": "2026-11-21",
    "title": "Voyager’s Neptune",
@@ -67,17 +78,6 @@
    "media_type": "image",
    "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Andromeda_closeupCruz4096.jpg",
    "link": "https://science.nasa.gov/image-article/apod-2026-november-13-ngc-206-and-the-star-clouds-of-andromeda/"
-  },
-  {
-   "date": "2026-11-12",
-   "title": "Moon, Venus and Spica Meet",
-   "explanation": "Not all those who wander are lost. A night sky example is that planets wander, and in fact the very word “planet” comes from “wandering star” in Greek. As planets shift relative to fixed stars, they may appear from our perspective to get closer to other astronomical objects. Such meetings are called conjunctions. They don’t happen by chance, but follow the precise laws of celestial mechanics. This peaceful image, captured in Poland, shows the crescent Moon above the Tatra Mountains, and bright Venus close by, a little lower in the horizon. The bright star to the left of Venus is Spica in the constellation of Virgo, the Maiden. Spica is one of the brightest stars in the sky, only about 250 light-years away. It was found in 1890 that Spica is a binary star: two massive blue stars orbiting each other every 4 days. But earlier this year it was reported that Spica, the current companion of wandering Venus, is actually a triple system.",
-   "copyright": "",
-   "url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/conjunction-bubak.jpg",
-   "hdurl": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/conjunction-bubak.jpg",
-   "media_type": "image",
-   "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/conjunction-bubak.jpg",
-   "link": "https://science.nasa.gov/image-article/apod-2026-november-12-moon-venus-and-spica-meet/"
   }
  ]
 }
