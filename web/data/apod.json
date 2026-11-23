@@ -1,7 +1,18 @@
 {
- "fetched": "2026-11-22T14:47:34+00:00",
+ "fetched": "2026-11-23T18:36:14+00:00",
  "source": "science.nasa.gov/apod",
  "items": [
+  {
+   "date": "2026-11-23",
+   "title": "The Emergence of Dark Nebula Lynds 1251",
+   "explanation": "If you stare into space for a long time, what might you see? At first, you might only see the usual brightest stars, but if your eyes (or camera) could continue to collect light, you would see increasingly more. In the direction of the featured image, after only a few minutes, you would begin to notice some regions without stars. As your staring continued, the dark region would become better defined, and after a full 20 hours, you would notice a strange dark structure. To celebrate, you use digital processing to brighten the image and enhance the colors. At the end, you might have an excellent image of Lynds 1251 (LDN 1251), a star -forming region laced with opaque brown-appearing interstellar dust. Also known as the Rotten Fish Nebula, LDN 1251 is home not only to young stars and dust, but also, your long staring indicates, energetic shock waves, fast stellar winds, and powerfully beamed jets.",
+   "copyright": "David Cruz",
+   "url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Ldn1251Comparison_Cruz_2160.jpg",
+   "hdurl": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Ldn1251Comparison_Cruz_2160.jpg",
+   "media_type": "image",
+   "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Ldn1251Comparison_Cruz_2160.jpg",
+   "link": "https://science.nasa.gov/image-article/apod-2026-november-23-the-emergence-of-dark-nebula-lynds-1251/"
+  },
   {
    "date": "2026-11-22",
    "title": "Swirls and Colors on Jupiter from Juno",
@@ -67,17 +78,6 @@
    "media_type": "image",
    "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/KF-ApAn48-7133-4.jpg",
    "link": "https://science.nasa.gov/image-article/apod-2026-november-14-apollo-12-and-surveyor-3/"
-  },
-  {
-   "date": "2026-11-13",
-   "title": "NGC 206 and the Star Clouds of Andromeda",
-   "explanation": "The large stellar association cataloged as NGC 206 is nestled within the dusty arms of the neighboring Andromeda galaxy along with the galaxy’s pinkish star-forming regions. Also known as M31, the spiral galaxy is a mere 2.5 million light-years away. NGC 206 is found at the center of this sharp and detailed close-up of the southwestern extent of Andromeda’s disk. The bright, blue stars of NGC 206 indicate its youth. In fact, its youngest massive stars are less than 10 million years old. Much larger than the open or galactic clusters of young stars in the disk of our Milky Way galaxy, NGC 206 spans about 4,000 light-years. That’s comparable in size to the giant stellar nurseries NGC 604 in nearby spiral M33 and the Tarantula Nebula in the Large Magellanic Cloud.",
-   "copyright": "David Cruz",
-   "url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Andromeda_closeupCruz4096.jpg",
-   "hdurl": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Andromeda_closeupCruz4096.jpg",
-   "media_type": "image",
-   "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Andromeda_closeupCruz4096.jpg",
-   "link": "https://science.nasa.gov/image-article/apod-2026-november-13-ngc-206-and-the-star-clouds-of-andromeda/"
   }
  ]
 }
