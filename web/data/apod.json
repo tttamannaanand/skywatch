@@ -1,7 +1,18 @@
 {
- "fetched": "2026-11-25T17:29:32+00:00",
+ "fetched": "2026-11-26T17:12:02+00:00",
  "source": "science.nasa.gov/apod",
  "items": [
+  {
+   "date": "2026-11-26",
+   "title": "Eye in the Sky: The Milky Way over Lençóis",
+   "explanation": "Beauty is in the eye of the beholder. And there is much to behold in today’s featured image. The Milky Way shines bright in the sky of Brazil, over the white sand dunes and dark lagoons of Lençóis Maranhenses National Park. We can see different parts of the Milky Way as it apparently rotates in the sky every night and throughout the year. This composite image was taken later in the night in July from a latitude of approximately 2º south. It shows some prominent Milky Way features, such as dark dust lanes and colorful nebulas. But does the Galaxy really appear arched like a rainbow in the sky? No, this is an artifact of a picture taken with a wide-angle lens. As the Galaxy was artfully framed by the photographer, it matches the contour of the dark lagoon creating the illusion of a cosmic eye, half in space and half on the ground. Is this eye in the sky looking back at you?",
+   "copyright": "",
+   "url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Milky_Way_Lencois.jpg",
+   "hdurl": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Milky_Way_Lencois.jpg",
+   "media_type": "image",
+   "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Milky_Way_Lencois.jpg",
+   "link": "https://science.nasa.gov/image-article/apod-2026-november-26-eye-in-the-sky-the-milky-way-over-lencois/"
+  },
   {
    "date": "2026-11-25",
    "title": "SPHEREx Seeing Through Dust",
@@ -78,17 +89,6 @@
    "media_type": "image",
    "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/solar_M_flare.jpg",
    "link": "https://science.nasa.gov/image-article/apod-2026-november-18-an-m-class-solar-flare/"
-  },
-  {
-   "date": "2026-11-16",
-   "title": "NGC 7129: Star Formation with Jets from Webb",
-   "explanation": "How do stars form? To help answer this question, NASA used the James Webb Space Telescope to take the featured detailed image of the star-forming region NGC 7129 in infrared light. Star formation progresses when gravity pulls together massive amounts of gas, but soon things can get complicated when previously formed stars emit powerful jets and winds — and some then explode. Opaque dust can form in the cool atmospheres of stars and, when dispersed, can obstruct visible-light images. Many stars can be seen to be forming in the featured image, with the young stars on the left, in the gold-colored gas, typically being more mature than the young stars on the right — in the red region. Jets and wind s likely cause the filamentary nature of the red-colored gas. Studying stars at different stages of development bolsters understanding about what physical processes are most important and when.",
-   "copyright": "NASA, ESA, CSA, STScI, JWST; Processing: A. Pagan (STScI)",
-   "url": "https://assets.science.nasa.gov/content/dam/science/missions/webb/science/2026/10/weic2620a.jpg",
-   "hdurl": "https://assets.science.nasa.gov/content/dam/science/missions/webb/science/2026/10/weic2620a.jpg",
-   "media_type": "image",
-   "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/missions/webb/science/2026/10/weic2620a.jpg",
-   "link": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb/"
   }
  ]
 }
