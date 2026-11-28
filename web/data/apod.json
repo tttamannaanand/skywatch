@@ -1,7 +1,18 @@
 {
- "fetched": "2026-11-27T16:53:47+00:00",
+ "fetched": "2026-11-28T15:45:13+00:00",
  "source": "science.nasa.gov/apod",
  "items": [
+  {
+   "date": "2026-11-28",
+   "title": "Apollo 17 VIP Site Anaglyph",
+   "explanation": "Get out your red/blue glasses and check out this stereo scene from Taurus-Littrow valley on the Moon! The color anaglyph features a detailed 3D view of Apollo 17’s Lunar Rover in the foreground. Behind it lies the Lunar Module and distant lunar hills. Because the world was going to be able to watch the Lunar Module’s ascent stage liftoff via the rover’s TV camera, this parking place was also known as the VIP Site. In December of 1972, Apollo 17 astronauts Eugene Cernan and Harrison Schmitt spent about 75 hours on the Moon, while colleague Ronald Evans orbited overhead. The crew returned with 110 kilograms of rock and soil samples, more than from any of the other lunar landing sites. Cernan and Schmitt are still the last to walk (or drive) on the Moon.",
+   "copyright": "Gene Cernan, Apollo 17, NASA; Anaglyph by Erik van Meijgaarden",
+   "url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/a17anaglyph_vanMeijgaarden_f.jpg",
+   "hdurl": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/a17anaglyph_vanMeijgaarden_f.jpg",
+   "media_type": "image",
+   "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/a17anaglyph_vanMeijgaarden_f.jpg",
+   "link": "https://science.nasa.gov/image-article/apod-2026-november-28-apollo-17-vip-site-anaglyph/"
+  },
   {
    "date": "2026-11-27",
    "title": "The Moon Watchers",
@@ -89,17 +100,6 @@
    "media_type": "image",
    "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/IMG_4364N_Kyriazis.jpg",
    "link": "https://science.nasa.gov/image-article/apod-2026-november-20-v-g-r/"
-  },
-  {
-   "date": "2026-11-18",
-   "title": "A Medium-Sized Solar Flare",
-   "explanation": "What a flare for the chromatic ! Today’s image combines a series of images taken over ten minutes capturing the Sun ’s chromosphere, the layer of the Sun ’s atmosphere above its surface where the temperature rises. Why would the Sun become hotter farther away from its core ? This is potentially due to energy from the swirling magnetic fields extending up through the Sun’s atmosphere. Those same magnetic fields can twist and snap, releasing light and energetic particles as a solar flare. The H-alpha filter used for today’s image captures light from energized hydrogen atoms as they travel off the Sun’s surface during a flare on May 14, 2025. This flare was classified as an M1 based on GOES observations, meaning it was moderately bright in X-rays. M-class flares can cause radio blackouts at Earth’s poles and minor radiation storms that can harm astronauts. They aren’t even the most powerful flares ! NASA, NOAA, and other agencies monitor the Sun to predict and identify such storms so we can protect humans on Earth and in space.",
-   "copyright": "Mario Cogo",
-   "url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/solar_M_flare.jpg",
-   "hdurl": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/solar_M_flare.jpg",
-   "media_type": "image",
-   "thumbnail_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/solar_M_flare.jpg",
-   "link": "https://science.nasa.gov/image-article/apod-2026-november-18-an-m-class-solar-flare/"
   }
  ]
 }
